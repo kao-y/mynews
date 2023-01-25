@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 use App\Http\Controllers\Admin\NewsController;
 Route::controller(NewsController::class)->prefix('admin')->group(function() {
-    Route::get('newss/create','add');
+    Route::get('news/create','add')->middleware('auth');
 });
 
 /*「http://XXXXXX.jp/XXX というアクセスが来たときに、
