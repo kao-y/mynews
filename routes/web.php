@@ -30,6 +30,7 @@ Route::controller(NewsController::class)->prefix('admin')->name('admin.')->middl
 
 
 
+
 use App\Http\Controllers\Admin\ProfileController;
 Route::controller(ProfileController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('profile/create', 'add')->name('profile.add');
